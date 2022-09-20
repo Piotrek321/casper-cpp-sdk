@@ -1,3 +1,4 @@
+#include <spdlog/spdlog.h>
 #include "CasperClient.h"
 
 namespace Casper {

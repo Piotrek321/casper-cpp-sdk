@@ -3,6 +3,7 @@
 #include <optional>
 #include <tuple>
 #include <unordered_map>
+#include <spdlog/spdlog.h>
 
 #include "Base.h"
 #include "CLType.h"
@@ -184,7 +185,7 @@ inline void from_json(const nlohmann::json& j, CLTypeParsedRVA& p,
         p = PublicKey::FromHexString(j.get<std::string>());
         break;
       default:
-        std::cerr << "Unsupported type in json " << std::endl;
+        SPDLOG_ERROR("Unsupported type in json");
         break;
     }
   } else if (cl_type_.type.which() == 1) {
