@@ -7,6 +7,22 @@ Casper C++ SDK provides an interface to establish a connection between the Caspe
 3. [OpenSSL Version 1.1.1 or newer](https://www.openssl.org)
 
 
+### Install Spdlog
+
+```
+git clone https://github.com/gabime/spdlog.git
+
+cd spdlog && mkdir build && cd build
+
+cmake -DCMAKE_CXX_FLAGS=-fPIC .. && make -j && sudo make install
+```
+
+**or via package manager:** <br/>
+
+```
+sudo dnf install spdlog-devel
+```
+
 ## Install Instruction of Dependencies
 
     sudo apt-get install build-essential libssl-dev
