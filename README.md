@@ -16,7 +16,19 @@ Casper C++ SDK provides an interface to establish a connection between the Caspe
     sudo apt-get install build-essential cmake libssl-dev
     sudo apt-get install graphviz
     sudo apt-get install doxygen
+### Install Spdlog
 
+```
+git clone https://github.com/gabime/spdlog.git
+cd spdlog && mkdir build && cd build
+cmake -DCMAKE_CXX_FLAGS=-fPIC .. && make -j && sudo make install
+```
+
+**or via package manager:** <br/>
+
+```
+sudo dnf install spdlog-devel
+```
 **TODO** cryptopp for Fedora-based distros.
 
 ### Install instructions for doxygen for CentOS

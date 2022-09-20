@@ -23,6 +23,7 @@ add_library(${LIB_NAME} STATIC
     include/Utils/CryptoUtil.cpp
     include/Utils/StringUtil.cpp
     include/Utils/CEP57Checksum.cpp
+    include/Utils/LogConfigurator.cpp
     include/Types/CLConverter.cpp
     include/Types/Deploy.cpp
     include/ByteSerializers/BaseByteSerializer.cpp
