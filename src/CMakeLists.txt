@@ -5,6 +5,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include/JsonRpc/ResultTypes
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Types
     ${CMAKE_CURRENT_SOURCE_DIR}/include/Utils
+    ${CMAKE_CURRENT_SOURCE_DIR}/Utils
     ${SDK_ROOT}/lib/cryptopp
     ${SDK_ROOT}/lib/
 )
@@ -24,6 +25,7 @@ add_library(${LIB_NAME} STATIC
     include/Types/CLConverter.cpp
     include/Types/Deploy.cpp
     include/ByteSerializers/BaseByteSerializer.cpp
+    Utils/LogConfigurator.cpp
 )
 
 find_package(OpenSSL REQUIRED)
