@@ -33,10 +33,12 @@ add_library(${LIB_NAME} STATIC
 # openssl comes from vcpkg or system
 # cryptopp-static comes from vcpkg or system
 # cryptopp_pem comes from local source tree
+# spdlog comes from vcpkg or system
 # linking PUBLIC as we want headers from all those libs be accessible to all clients
 target_link_libraries(${LIB_NAME}
     PUBLIC
     OpenSSL::SSL
     ${CRYPTOPP_LIBRARIES}
     cryptopp_pem
+    spdlog::spdlog
 )
