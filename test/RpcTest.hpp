@@ -14,6 +14,7 @@
 namespace Casper {
 
 inline std::string privKeyPemFile = std::filesystem::canonical("/proc/self/exe").parent_path().string() + "/data/cpp_sdk_test_secret_key.pem";
+inline std::string privKeyPemFileTarget = std::filesystem::canonical("/proc/self/exe").parent_path().string() + "/data/Piotrek1_secret_key.pem";
 
 void test1(void);
 

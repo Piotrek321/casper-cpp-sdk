@@ -470,10 +470,10 @@ void ed25KeyTest() {
 
 #define RPC_TEST 1
 #define SER_DE_TEST 0
-#define CL_TYPE_TEST 1
-#define CL_VALUE_TEST 1
-#define DEPLOY_ITEM_BYTE_SERIALIZER_TEST 1
-#define CL_VALUE_BYTE_SERIALIZER_TEST 1
+#define CL_TYPE_TEST 0
+#define CL_VALUE_TEST 0
+#define DEPLOY_ITEM_BYTE_SERIALIZER_TEST 0
+#define CL_VALUE_BYTE_SERIALIZER_TEST 0
 TEST_LIST = {
 
 #if CL_VALUE_BYTE_SERIALIZER_TEST == 1
@@ -514,15 +514,15 @@ TEST_LIST = {
     {"TransferDeployItemSerialization", DeployItem_ByteSer_Transfer_Test},
 #endif
 
-    {"ED25519 Key Test", ed25KeyTest},
+   /* {"ED25519 Key Test", ed25KeyTest},
     {"PublicKey Load fromFile", publicKey_load_fromFileTest},
     {"getAccountHash checks internal PublicKey to AccountHash converter",
      publicKey_getAccountHashTest},
     {"toLower checks internal lower case converter", stringUtil_toLowerTest},
-    {"gsk test", globalStateKey_serializer_test},
+    {"gsk test", globalStateKey_serializer_test},*/
 
 #if RPC_TEST == 1
-    {"infoGetPeers checks node list size", infoGetPeers_Test},
+/*    {"infoGetPeers checks node list size", infoGetPeers_Test},
     {"chainGetStateRootHash using Block height parameter",
      chainGetStateRootHash_with_blockHeightTest},
     {"chainGetStateRootHash using invalid Block height parameter",
@@ -562,7 +562,11 @@ TEST_LIST = {
     {"PutDeploy RPC Call with a Stored Contract by Hash",
      PutDeploy_StoredContractByHash_Test},
     {"GlobalStateKey Serialization and Deserialization test",
-     globalStateKey_Simple_Test},
+     globalStateKey_Simple_Test}*/
+        {"PutDeploy RPC Call with a Stored Contract by Hash",
+         PutDeploy_StoredContractByHash_Test},
+/*        {"PutDeploy RPC Call with a Stored Contract by Name",
+         PutDeploy_StoredContractByName_Test},*/
 #endif
 
 #if SER_DE_TEST == 1

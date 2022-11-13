@@ -25,5 +25,7 @@ set(DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/data)
 
 set(PEM_FILE
     ${CMAKE_CURRENT_SOURCE_DIR}/data/cpp_sdk_test_secret_key.pem)
+set(PEM_FILE
+        ${CMAKE_CURRENT_SOURCE_DIR}/data/Piotrek1_secret_key.pem)
 
 file(COPY ${PEM_FILE} DESTINATION ${DESTINATION})
